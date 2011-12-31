@@ -1,0 +1,16 @@
+Performance Statistics   2011-12-31 14:41:00 - 2011-12-31 14:42:00
+Tag                                                  Avg(ms)         Min         Max     Std Dev       Count
+CREATE_TICKET_GRANTING_TICKET                           11.0          11          11         0.0           1
+GRANT_SERVICE_TICKET                                     2.0           2           2         0.0           1
+VALIDATE_SERVICE_TICKET                                  4.0           4           4         0.0           1
+
+Performance Statistics   2011-12-31 14:42:00 - 2011-12-31 14:43:00
+Tag                                                  Avg(ms)         Min         Max     Std Dev       Count
+
+Performance Statistics   2011-12-31 14:45:00 - 2011-12-31 14:46:00
+Tag                                                  Avg(ms)         Min         Max     Std Dev       Count
+CREATE_TICKET_GRANTING_TICKET                           13.0          13          13         0.0           1
+DESTROY_TICKET_GRANTING_TICKET                           0.0           0           0         0.0           1
+GRANT_SERVICE_TICKET                                     1.5           0           3         1.5           2
+VALIDATE_SERVICE_TICKET                                  3.0           3           3         0.0           1
+

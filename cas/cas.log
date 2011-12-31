@@ -1,0 +1,428 @@
+2011-12-31 14:37:56,682 INFO [org.springframework.security.core.SpringSecurityCoreVersion] - You are running with Spring Security Core 3.0.5.RELEASE
+2011-12-31 14:37:56,683 INFO [org.springframework.security.config.SecurityNamespaceHandler] - Spring Security 'config' module version is 3.0.5.RELEASE
+2011-12-31 14:37:56,757 INFO [org.springframework.security.config.http.AuthenticationConfigBuilder] - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+2011-12-31 14:37:56,763 INFO [org.springframework.security.config.http.HttpSecurityBeanDefinitionParser] - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 300, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, <casProcessingFilter>, order = 701, Root bean: class [org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1000, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1200, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1300, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 1900]
+2011-12-31 14:38:00,951 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://**
+2011-12-31 14:38:00,951 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service https://**
+2011-12-31 14:38:00,951 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imaps://**
+2011-12-31 14:38:00,951 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imap://**
+2011-12-31 14:38:00,951 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8081/web1/j_spring_cas_security_check
+2011-12-31 14:38:00,951 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:38:00,953 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - Loaded 6 services.
+2011-12-31 14:38:01,404 WARN [org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler] - org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler is only to be used in a testing environment.  NEVER enable this in a production environment.
+2011-12-31 14:38:02,315 DEBUG [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Autowired the following triggers defined in application context: [triggerJobDetailTicketRegistryCleaner, periodicServiceRegistryReloaderTrigger]
+2011-12-31 14:38:04,196 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Added URL pattern: /**; attributes: [ROLE_ADMIN]
+2011-12-31 14:38:04,200 INFO [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Validated configuration attributes
+2011-12-31 14:38:07,067 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Starting Quartz Scheduler now
+2011-12-31 14:38:07,748 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.deleteRegisteredService(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:38:07,748 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.manage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:38:09,733 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Shutting down Quartz Scheduler
+2011-12-31 14:40:39,270 INFO [org.springframework.security.core.SpringSecurityCoreVersion] - You are running with Spring Security Core 3.0.5.RELEASE
+2011-12-31 14:40:39,271 INFO [org.springframework.security.config.SecurityNamespaceHandler] - Spring Security 'config' module version is 3.0.5.RELEASE
+2011-12-31 14:40:39,350 INFO [org.springframework.security.config.http.AuthenticationConfigBuilder] - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+2011-12-31 14:40:39,357 INFO [org.springframework.security.config.http.HttpSecurityBeanDefinitionParser] - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 300, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, <casProcessingFilter>, order = 701, Root bean: class [org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1000, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1200, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1300, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 1900]
+2011-12-31 14:40:43,590 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://**
+2011-12-31 14:40:43,590 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service https://**
+2011-12-31 14:40:43,590 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imaps://**
+2011-12-31 14:40:43,590 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imap://**
+2011-12-31 14:40:43,590 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8081/web1/j_spring_cas_security_check
+2011-12-31 14:40:43,590 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:40:43,593 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - Loaded 6 services.
+2011-12-31 14:40:44,050 WARN [org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler] - org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler is only to be used in a testing environment.  NEVER enable this in a production environment.
+2011-12-31 14:40:44,990 DEBUG [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Autowired the following triggers defined in application context: [triggerJobDetailTicketRegistryCleaner, periodicServiceRegistryReloaderTrigger]
+2011-12-31 14:40:46,828 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Added URL pattern: /**; attributes: [ROLE_ADMIN]
+2011-12-31 14:40:46,833 INFO [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Validated configuration attributes
+2011-12-31 14:40:49,823 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Starting Quartz Scheduler now
+2011-12-31 14:40:50,501 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.deleteRegisteredService(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:40:50,502 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.manage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:41:01,290 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Beginning ticket cleanup.
+2011-12-31 14:41:01,290 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Attempting to acquire ticket cleanup lock.
+2011-12-31 14:41:01,291 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Acquired lock.  Proceeding with cleanup.
+2011-12-31 14:41:01,291 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - 0 tickets found to be removed.
+2011-12-31 14:41:01,291 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Releasing ticket cleanup lock.
+2011-12-31 14:41:01,292 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Finished ticket cleanup.
+2011-12-31 14:41:05,592 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Shutting down Quartz Scheduler
+2011-12-31 14:41:28,757 INFO [org.springframework.security.core.SpringSecurityCoreVersion] - You are running with Spring Security Core 3.0.5.RELEASE
+2011-12-31 14:41:28,758 INFO [org.springframework.security.config.SecurityNamespaceHandler] - Spring Security 'config' module version is 3.0.5.RELEASE
+2011-12-31 14:41:28,817 INFO [org.springframework.security.config.http.AuthenticationConfigBuilder] - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+2011-12-31 14:41:28,822 INFO [org.springframework.security.config.http.HttpSecurityBeanDefinitionParser] - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 300, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, <casProcessingFilter>, order = 701, Root bean: class [org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1000, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1200, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1300, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 1900]
+2011-12-31 14:41:33,080 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://**
+2011-12-31 14:41:33,080 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service https://**
+2011-12-31 14:41:33,080 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imaps://**
+2011-12-31 14:41:33,080 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imap://**
+2011-12-31 14:41:33,080 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8081/web1/j_spring_cas_security_check
+2011-12-31 14:41:33,080 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:41:33,082 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - Loaded 6 services.
+2011-12-31 14:41:33,555 WARN [org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler] - org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler is only to be used in a testing environment.  NEVER enable this in a production environment.
+2011-12-31 14:41:34,464 DEBUG [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Autowired the following triggers defined in application context: [triggerJobDetailTicketRegistryCleaner, periodicServiceRegistryReloaderTrigger]
+2011-12-31 14:41:36,378 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Added URL pattern: /**; attributes: [ROLE_ADMIN]
+2011-12-31 14:41:36,381 INFO [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Validated configuration attributes
+2011-12-31 14:41:39,235 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Starting Quartz Scheduler now
+2011-12-31 14:41:40,322 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.deleteRegisteredService(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:41:40,322 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.manage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:41:47,233 DEBUG [org.springframework.security.web.FilterChainProxy] - Converted URL to lowercase, from: '/services/manage.html'; to: '/services/manage.html'
+2011-12-31 14:41:47,233 DEBUG [org.springframework.security.web.FilterChainProxy] - Candidate is: '/services/manage.html'; pattern is /services/loggedout.html; matched=false
+2011-12-31 14:41:47,233 DEBUG [org.springframework.security.web.FilterChainProxy] - Converted URL to lowercase, from: '/services/manage.html'; to: '/services/manage.html'
+2011-12-31 14:41:47,233 DEBUG [org.springframework.security.web.FilterChainProxy] - Candidate is: '/services/manage.html'; pattern is /**; matched=true
+2011-12-31 14:41:47,235 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 1 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2011-12-31 14:41:47,235 DEBUG [org.springframework.security.web.context.HttpSessionSecurityContextRepository] - No HttpSession currently exists
+2011-12-31 14:41:47,235 DEBUG [org.springframework.security.web.context.HttpSessionSecurityContextRepository] - No SecurityContext was available from the HttpSession: null. A new one will be created.
+2011-12-31 14:41:47,239 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 2 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2011-12-31 14:41:47,239 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 3 of 12 in additional filter chain; firing Filter: 'CasAuthenticationFilter'
+2011-12-31 14:41:47,240 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 4 of 12 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+2011-12-31 14:41:47,240 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 5 of 12 in additional filter chain; firing Filter: 'DefaultLoginPageGeneratingFilter'
+2011-12-31 14:41:47,240 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 6 of 12 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2011-12-31 14:41:47,240 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 7 of 12 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2011-12-31 14:41:47,241 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 8 of 12 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2011-12-31 14:41:47,242 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 9 of 12 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2011-12-31 14:41:47,243 DEBUG [org.springframework.security.web.authentication.AnonymousAuthenticationFilter] - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@9055e4a6: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+2011-12-31 14:41:47,243 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 10 of 12 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2011-12-31 14:41:47,243 DEBUG [org.springframework.security.web.session.SessionManagementFilter] - Requested session IDE651D528BDF0BC9694BE5EA51DCD16EF is invalid.
+2011-12-31 14:41:47,244 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 11 of 12 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2011-12-31 14:41:47,244 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 12 of 12 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2011-12-31 14:41:47,244 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Converted URL to lowercase, from: '/services/manage.html'; to: '/services/manage.html'
+2011-12-31 14:41:47,245 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Candidate is: '/services/manage.html'; pattern is /**; matched=true
+2011-12-31 14:41:47,245 DEBUG [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Secure object: FilterInvocation: URL: /services/manage.html; Attributes: [ROLE_ADMIN]
+2011-12-31 14:41:47,245 DEBUG [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@9055e4a6: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+2011-12-31 14:41:47,245 DEBUG [org.springframework.security.access.vote.AffirmativeBased] - Voter: org.springframework.security.access.vote.RoleVoter@72af1cf6, returned: -1
+2011-12-31 14:41:47,246 DEBUG [org.springframework.security.access.vote.AffirmativeBased] - Voter: org.springframework.security.access.vote.AuthenticatedVoter@4696954c, returned: 0
+2011-12-31 14:41:47,251 DEBUG [org.springframework.security.web.access.ExceptionTranslationFilter] - Access is denied (user is anonymous); redirecting to authentication entry point
+org.springframework.security.access.AccessDeniedException: Access is denied
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:71)
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:203)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:106)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:83)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:97)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:78)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:35)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:177)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:187)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:187)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:79)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:169)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:237)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:167)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:237)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:167)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:926)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+2011-12-31 14:41:47,264 DEBUG [org.springframework.security.web.savedrequest.HttpSessionRequestCache] - DefaultSavedRequest added to Session: DefaultSavedRequest[http://localhost:8080/cas/services/manage.html]
+2011-12-31 14:41:47,264 DEBUG [org.springframework.security.web.access.ExceptionTranslationFilter] - Calling Authentication entry point.
+2011-12-31 14:41:47,265 DEBUG [org.springframework.security.web.context.HttpSessionSecurityContextRepository] - SecurityContext is empty or anonymous - context will not be stored in HttpSession. 
+2011-12-31 14:41:47,274 DEBUG [org.springframework.security.web.context.SecurityContextPersistenceFilter] - SecurityContextHolder now cleared, as request processing completed
+2011-12-31 14:41:47,851 INFO [org.jasig.cas.web.flow.InitialFlowSetupAction] - Setting path for cookies to: /cas/
+2011-12-31 14:41:47,851 INFO [org.jasig.cas.web.flow.InitialFlowSetupAction] - Setting path for cookies to: /cas/
+2011-12-31 14:41:47,858 DEBUG [org.jasig.cas.web.support.CasArgumentExtractor] - Extractor generated service for: http://localhost:8080/cas/services/j_acegi_cas_security_check
+2011-12-31 14:41:47,858 DEBUG [org.jasig.cas.web.flow.InitialFlowSetupAction] - Placing service in FlowScope: http://localhost:8080/cas/services/j_acegi_cas_security_check
+2011-12-31 14:41:47,858 DEBUG [org.jasig.cas.web.flow.InitialFlowSetupAction] - Placing service in FlowScope: http://localhost:8080/cas/services/j_acegi_cas_security_check
+2011-12-31 14:41:47,871 DEBUG [org.jasig.cas.web.flow.GenerateLoginTicketAction] - Generated login ticket LT-1-5oW0PJdBcSSaQcbwH5Mu5at40szfjT
+2011-12-31 14:41:47,871 DEBUG [org.jasig.cas.web.flow.GenerateLoginTicketAction] - Generated login ticket LT-1-5oW0PJdBcSSaQcbwH5Mu5at40szfjT
+2011-12-31 14:41:50,938 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Beginning ticket cleanup.
+2011-12-31 14:41:50,938 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Attempting to acquire ticket cleanup lock.
+2011-12-31 14:41:50,939 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Acquired lock.  Proceeding with cleanup.
+2011-12-31 14:41:50,939 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - 0 tickets found to be removed.
+2011-12-31 14:41:50,939 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Releasing ticket cleanup lock.
+2011-12-31 14:41:50,939 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Finished ticket cleanup.
+2011-12-31 14:41:52,750 DEBUG [org.jasig.cas.web.support.CasArgumentExtractor] - Extractor generated service for: http://localhost:8080/cas/services/j_acegi_cas_security_check
+2011-12-31 14:41:58,048 DEBUG [org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler] - User [admin] was successfully authenticated.
+2011-12-31 14:41:58,049 INFO [org.jasig.cas.authentication.AuthenticationManagerImpl] - AuthenticationHandler: org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler successfully authenticated the user which provided the following credentials: [username: admin]
+2011-12-31 14:41:58,049 DEBUG [org.jasig.cas.authentication.principal.UsernamePasswordCredentialsToPrincipalResolver] - Attempting to resolve a principal...
+2011-12-31 14:41:58,049 DEBUG [org.jasig.cas.authentication.principal.UsernamePasswordCredentialsToPrincipalResolver] - Creating SimplePrincipal for [admin]
+2011-12-31 14:41:58,050 INFO [org.jasig.cas.authentication.AuthenticationManagerImpl] - Resolved principal admin
+2011-12-31 14:41:58,051 INFO [org.jasig.cas.authentication.AuthenticationManagerImpl] - Principal found: admin
+2011-12-31 14:41:58,051 DEBUG [org.jasig.cas.authentication.AuthenticationManagerImpl] - Attribute map for admin: {}
+2011-12-31 14:41:58,054 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: [username: admin]
+WHAT: supplied credentials: [username: admin]
+ACTION: AUTHENTICATION_SUCCESS
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:41:58 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:41:58,058 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Added ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas] to registry.
+2011-12-31 14:41:58,058 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: [username: admin]
+WHAT: TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas
+ACTION: TICKET_GRANTING_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:41:58 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:41:58,059 DEBUG [org.jasig.cas.web.support.CookieRetrievingCookieGenerator] - Removed cookie with name [CASPRIVACY]
+2011-12-31 14:41:58,059 DEBUG [org.jasig.cas.web.support.CookieRetrievingCookieGenerator] - Added cookie with name [CASTGC] and value [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas]
+2011-12-31 14:41:58,062 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas]
+2011-12-31 14:41:58,062 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas] found in registry.
+2011-12-31 14:41:58,065 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Added ticket [ST-1-5RVg7b4d6dfHPygRadae-cas] to registry.
+2011-12-31 14:41:58,065 INFO [org.jasig.cas.CentralAuthenticationServiceImpl] - Granted service ticket [ST-1-5RVg7b4d6dfHPygRadae-cas] for service [http://localhost:8080/cas/services/j_acegi_cas_security_check] for user [admin]
+2011-12-31 14:41:58,065 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas]
+2011-12-31 14:41:58,065 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas] found in registry.
+2011-12-31 14:41:58,065 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: admin
+WHAT: ST-1-5RVg7b4d6dfHPygRadae-cas for http://localhost:8080/cas/services/j_acegi_cas_security_check
+ACTION: SERVICE_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:41:58 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.FilterChainProxy] - Converted URL to lowercase, from: '/services/j_acegi_cas_security_check'; to: '/services/j_acegi_cas_security_check'
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.FilterChainProxy] - Candidate is: '/services/j_acegi_cas_security_check'; pattern is /services/loggedout.html; matched=false
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.FilterChainProxy] - Converted URL to lowercase, from: '/services/j_acegi_cas_security_check'; to: '/services/j_acegi_cas_security_check'
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.FilterChainProxy] - Candidate is: '/services/j_acegi_cas_security_check'; pattern is /**; matched=true
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/j_acegi_cas_security_check?ticket=ST-1-5RVg7b4d6dfHPygRadae-cas at position 1 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.context.HttpSessionSecurityContextRepository] - HttpSession returned null object for SPRING_SECURITY_CONTEXT
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.context.HttpSessionSecurityContextRepository] - No SecurityContext was available from the HttpSession: org.mortbay.jetty.servlet.HashSessionManager$Session:h7fyqs41n2x2vovbprb2yk9m@182763800. A new one will be created.
+2011-12-31 14:41:58,074 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/j_acegi_cas_security_check?ticket=ST-1-5RVg7b4d6dfHPygRadae-cas at position 2 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2011-12-31 14:41:58,075 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/j_acegi_cas_security_check?ticket=ST-1-5RVg7b4d6dfHPygRadae-cas at position 3 of 12 in additional filter chain; firing Filter: 'CasAuthenticationFilter'
+2011-12-31 14:41:58,075 DEBUG [org.springframework.security.cas.web.CasAuthenticationFilter] - Request is to process authentication
+2011-12-31 14:41:58,075 DEBUG [org.springframework.security.authentication.ProviderManager] - Authentication attempt using org.springframework.security.cas.authentication.CasAuthenticationProvider
+2011-12-31 14:41:58,075 DEBUG [org.jasig.cas.client.validation.Cas20ServiceTicketValidator] - Placing URL parameters in map.
+2011-12-31 14:41:58,076 DEBUG [org.jasig.cas.client.validation.Cas20ServiceTicketValidator] - Calling template URL attribute map.
+2011-12-31 14:41:58,076 DEBUG [org.jasig.cas.client.validation.Cas20ServiceTicketValidator] - Loading custom parameters from configuration.
+2011-12-31 14:41:58,076 DEBUG [org.jasig.cas.client.validation.Cas20ServiceTicketValidator] - Constructing validation url: http://localhost:8080/cas/serviceValidate?ticket=ST-1-5RVg7b4d6dfHPygRadae-cas&service=http%3A%2F%2Flocalhost%3A8080%2Fcas%2Fservices%2Fj_acegi_cas_security_check
+2011-12-31 14:41:58,076 DEBUG [org.jasig.cas.client.validation.Cas20ServiceTicketValidator] - Retrieving response from server.
+2011-12-31 14:41:58,098 DEBUG [org.jasig.cas.web.support.CasArgumentExtractor] - Extractor generated service for: http://localhost:8080/cas/services/j_acegi_cas_security_check
+2011-12-31 14:41:58,109 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [ST-1-5RVg7b4d6dfHPygRadae-cas]
+2011-12-31 14:41:58,109 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Ticket [ST-1-5RVg7b4d6dfHPygRadae-cas] found in registry.
+2011-12-31 14:41:58,113 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Removing ticket [ST-1-5RVg7b4d6dfHPygRadae-cas] from registry
+2011-12-31 14:41:58,114 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [ST-1-5RVg7b4d6dfHPygRadae-cas]
+2011-12-31 14:41:58,114 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: audit:unknown
+WHAT: ST-1-5RVg7b4d6dfHPygRadae-cas
+ACTION: SERVICE_TICKET_VALIDATED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:41:58 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:41:58,130 DEBUG [org.jasig.cas.web.ServiceValidateController] - Successfully validated service ticket: ST-1-5RVg7b4d6dfHPygRadae-cas
+2011-12-31 14:41:58,775 DEBUG [org.jasig.cas.client.validation.Cas20ServiceTicketValidator] - Server response: <cas:serviceResponse xmlns:cas='http://www.yale.edu/tp/cas'>
+	<cas:authenticationSuccess>
+		<cas:user>admin</cas:user>
+
+
+	</cas:authenticationSuccess>
+</cas:serviceResponse>
+
+2011-12-31 14:41:58,792 DEBUG [org.springframework.security.cas.web.CasAuthenticationFilter] - Authentication success. Updating SecurityContextHolder to contain: org.springframework.security.cas.authentication.CasAuthenticationToken@8d778c83: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffd148a: RemoteIpAddress: 127.0.0.1; SessionId: h7fyqs41n2x2vovbprb2yk9m; Granted Authorities: ROLE_ADMIN Assertion: org.jasig.cas.client.validation.AssertionImpl@5675d86b Credentials (Service/Proxy Ticket): ST-1-5RVg7b4d6dfHPygRadae-cas
+2011-12-31 14:41:58,792 DEBUG [org.springframework.security.web.savedrequest.HttpSessionRequestCache] - Removing DefaultSavedRequest from session if present
+2011-12-31 14:41:58,793 DEBUG [org.springframework.security.web.DefaultRedirectStrategy] - Redirecting to '/cas/services/manage.html'
+2011-12-31 14:41:58,793 DEBUG [org.springframework.security.web.context.HttpSessionSecurityContextRepository] - SecurityContext stored to HttpSession: 'org.springframework.security.core.context.SecurityContextImpl@8d778c83: Authentication: org.springframework.security.cas.authentication.CasAuthenticationToken@8d778c83: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffd148a: RemoteIpAddress: 127.0.0.1; SessionId: h7fyqs41n2x2vovbprb2yk9m; Granted Authorities: ROLE_ADMIN Assertion: org.jasig.cas.client.validation.AssertionImpl@5675d86b Credentials (Service/Proxy Ticket): ST-1-5RVg7b4d6dfHPygRadae-cas'
+2011-12-31 14:41:58,794 DEBUG [org.springframework.security.web.context.SecurityContextPersistenceFilter] - SecurityContextHolder now cleared, as request processing completed
+2011-12-31 14:41:58,797 DEBUG [org.springframework.security.web.FilterChainProxy] - Converted URL to lowercase, from: '/services/manage.html'; to: '/services/manage.html'
+2011-12-31 14:41:58,797 DEBUG [org.springframework.security.web.FilterChainProxy] - Candidate is: '/services/manage.html'; pattern is /services/loggedout.html; matched=false
+2011-12-31 14:41:58,797 DEBUG [org.springframework.security.web.FilterChainProxy] - Converted URL to lowercase, from: '/services/manage.html'; to: '/services/manage.html'
+2011-12-31 14:41:58,797 DEBUG [org.springframework.security.web.FilterChainProxy] - Candidate is: '/services/manage.html'; pattern is /**; matched=true
+2011-12-31 14:41:58,797 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 1 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2011-12-31 14:41:58,797 DEBUG [org.springframework.security.web.context.HttpSessionSecurityContextRepository] - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@8d778c83: Authentication: org.springframework.security.cas.authentication.CasAuthenticationToken@8d778c83: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffd148a: RemoteIpAddress: 127.0.0.1; SessionId: h7fyqs41n2x2vovbprb2yk9m; Granted Authorities: ROLE_ADMIN Assertion: org.jasig.cas.client.validation.AssertionImpl@5675d86b Credentials (Service/Proxy Ticket): ST-1-5RVg7b4d6dfHPygRadae-cas'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 2 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 3 of 12 in additional filter chain; firing Filter: 'CasAuthenticationFilter'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 4 of 12 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 5 of 12 in additional filter chain; firing Filter: 'DefaultLoginPageGeneratingFilter'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 6 of 12 in additional filter chain; firing Filter: 'BasicAuthenticationFilter'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 7 of 12 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 8 of 12 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+2011-12-31 14:41:58,798 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 9 of 12 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.authentication.AnonymousAuthenticationFilter] - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.cas.authentication.CasAuthenticationToken@8d778c83: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffd148a: RemoteIpAddress: 127.0.0.1; SessionId: h7fyqs41n2x2vovbprb2yk9m; Granted Authorities: ROLE_ADMIN Assertion: org.jasig.cas.client.validation.AssertionImpl@5675d86b Credentials (Service/Proxy Ticket): ST-1-5RVg7b4d6dfHPygRadae-cas'
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 10 of 12 in additional filter chain; firing Filter: 'SessionManagementFilter'
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 11 of 12 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html at position 12 of 12 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Converted URL to lowercase, from: '/services/manage.html'; to: '/services/manage.html'
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Candidate is: '/services/manage.html'; pattern is /**; matched=true
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Secure object: FilterInvocation: URL: /services/manage.html; Attributes: [ROLE_ADMIN]
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Previously Authenticated: org.springframework.security.cas.authentication.CasAuthenticationToken@8d778c83: Principal: org.springframework.security.core.userdetails.User@586034f: Username: admin; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_ADMIN; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffd148a: RemoteIpAddress: 127.0.0.1; SessionId: h7fyqs41n2x2vovbprb2yk9m; Granted Authorities: ROLE_ADMIN Assertion: org.jasig.cas.client.validation.AssertionImpl@5675d86b Credentials (Service/Proxy Ticket): ST-1-5RVg7b4d6dfHPygRadae-cas
+2011-12-31 14:41:58,799 DEBUG [org.springframework.security.access.vote.AffirmativeBased] - Voter: org.springframework.security.access.vote.RoleVoter@72af1cf6, returned: 1
+2011-12-31 14:41:58,800 DEBUG [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Authorization successful
+2011-12-31 14:41:58,800 DEBUG [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - RunAsManager did not change Authentication object
+2011-12-31 14:41:58,800 DEBUG [org.springframework.security.web.FilterChainProxy] - /services/manage.html reached end of additional filter chain; proceeding with original chain
+2011-12-31 14:42:00,056 DEBUG [org.springframework.security.web.access.ExceptionTranslationFilter] - Chain processed normally
+2011-12-31 14:42:00,057 DEBUG [org.springframework.security.web.context.SecurityContextPersistenceFilter] - SecurityContextHolder now cleared, as request processing completed
+2011-12-31 14:43:33,118 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - Reloading registered services.
+2011-12-31 14:43:33,118 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://**
+2011-12-31 14:43:33,118 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service https://**
+2011-12-31 14:43:33,118 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imaps://**
+2011-12-31 14:43:33,119 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imap://**
+2011-12-31 14:43:33,119 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8081/web1/j_spring_cas_security_check
+2011-12-31 14:43:33,119 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:43:33,119 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - Loaded 6 services.
+2011-12-31 14:44:18,348 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Shutting down Quartz Scheduler
+2011-12-31 14:45:05,423 INFO [org.springframework.security.core.SpringSecurityCoreVersion] - You are running with Spring Security Core 3.0.5.RELEASE
+2011-12-31 14:45:05,424 INFO [org.springframework.security.config.SecurityNamespaceHandler] - Spring Security 'config' module version is 3.0.5.RELEASE
+2011-12-31 14:45:05,487 INFO [org.springframework.security.config.http.AuthenticationConfigBuilder] - No login page configured. The default internal one will be used. Use the 'login-page' attribute to set the URL of the login page.
+2011-12-31 14:45:05,494 INFO [org.springframework.security.config.http.HttpSecurityBeanDefinitionParser] - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 300, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, <casProcessingFilter>, order = 701, Root bean: class [org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 800, Root bean: class [org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1000, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1200, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1300, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1400, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1800, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 1900]
+2011-12-31 14:45:09,741 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://**
+2011-12-31 14:45:09,741 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service https://**
+2011-12-31 14:45:09,741 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imaps://**
+2011-12-31 14:45:09,741 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service imap://**
+2011-12-31 14:45:09,741 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8081/web1/j_spring_cas_security_check
+2011-12-31 14:45:09,741 DEBUG [org.jasig.cas.services.DefaultServicesManagerImpl] - Adding registered service http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:45:09,744 INFO [org.jasig.cas.services.DefaultServicesManagerImpl] - Loaded 6 services.
+2011-12-31 14:45:10,616 WARN [org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler] - org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler is only to be used in a testing environment.  NEVER enable this in a production environment.
+2011-12-31 14:45:11,555 DEBUG [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Autowired the following triggers defined in application context: [triggerJobDetailTicketRegistryCleaner, periodicServiceRegistryReloaderTrigger]
+2011-12-31 14:45:13,537 DEBUG [org.springframework.security.web.access.intercept.DefaultFilterInvocationSecurityMetadataSource] - Added URL pattern: /**; attributes: [ROLE_ADMIN]
+2011-12-31 14:45:13,540 INFO [org.springframework.security.web.access.intercept.FilterSecurityInterceptor] - Validated configuration attributes
+2011-12-31 14:45:17,004 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Starting Quartz Scheduler now
+2011-12-31 14:45:17,696 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.deleteRegisteredService(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:45:17,697 DEBUG [org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController] - Found action method [public org.springframework.web.servlet.ModelAndView org.jasig.cas.services.web.ManageRegisteredServicesMultiActionController.manage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)]
+2011-12-31 14:45:27,854 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Beginning ticket cleanup.
+2011-12-31 14:45:27,854 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Attempting to acquire ticket cleanup lock.
+2011-12-31 14:45:27,855 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Acquired lock.  Proceeding with cleanup.
+2011-12-31 14:45:27,856 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - 0 tickets found to be removed.
+2011-12-31 14:45:27,856 DEBUG [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Releasing ticket cleanup lock.
+2011-12-31 14:45:27,856 INFO [org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner] - Finished ticket cleanup.
+2011-12-31 14:45:32,177 INFO [org.jasig.cas.web.flow.InitialFlowSetupAction] - Setting path for cookies to: /cas/
+2011-12-31 14:45:32,177 INFO [org.jasig.cas.web.flow.InitialFlowSetupAction] - Setting path for cookies to: /cas/
+2011-12-31 14:45:32,183 DEBUG [org.jasig.cas.web.support.CasArgumentExtractor] - Extractor generated service for: http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:45:32,184 DEBUG [org.jasig.cas.web.flow.InitialFlowSetupAction] - Placing service in FlowScope: http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:45:32,184 DEBUG [org.jasig.cas.web.flow.InitialFlowSetupAction] - Placing service in FlowScope: http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:45:32,226 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas]
+2011-12-31 14:45:32,229 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas]
+2011-12-31 14:45:32,230 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: audit:unknown
+WHAT: http://localhost:8082/web2/j_spring_cas_security_check
+ACTION: SERVICE_TICKET_NOT_CREATED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:45:32 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:45:32,233 DEBUG [org.jasig.cas.web.flow.GenerateLoginTicketAction] - Generated login ticket LT-1-RFfOBtK0vfYcf9Opge7bvUY47WZmaw
+2011-12-31 14:45:32,233 DEBUG [org.jasig.cas.web.flow.GenerateLoginTicketAction] - Generated login ticket LT-1-RFfOBtK0vfYcf9Opge7bvUY47WZmaw
+2011-12-31 14:45:37,893 DEBUG [org.jasig.cas.web.support.CasArgumentExtractor] - Extractor generated service for: http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:45:47,339 DEBUG [org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler] - User [phoenix] was successfully authenticated.
+2011-12-31 14:45:47,339 INFO [org.jasig.cas.authentication.AuthenticationManagerImpl] - AuthenticationHandler: org.jasig.cas.authentication.handler.support.SimpleTestUsernamePasswordAuthenticationHandler successfully authenticated the user which provided the following credentials: [username: phoenix]
+2011-12-31 14:45:47,340 DEBUG [org.jasig.cas.authentication.principal.UsernamePasswordCredentialsToPrincipalResolver] - Attempting to resolve a principal...
+2011-12-31 14:45:47,340 DEBUG [org.jasig.cas.authentication.principal.UsernamePasswordCredentialsToPrincipalResolver] - Creating SimplePrincipal for [phoenix]
+2011-12-31 14:45:47,342 INFO [org.jasig.cas.authentication.AuthenticationManagerImpl] - Resolved principal phoenix
+2011-12-31 14:45:47,342 INFO [org.jasig.cas.authentication.AuthenticationManagerImpl] - Principal found: phoenix
+2011-12-31 14:45:47,343 DEBUG [org.jasig.cas.authentication.AuthenticationManagerImpl] - Attribute map for phoenix: {}
+2011-12-31 14:45:47,346 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: [username: phoenix]
+WHAT: supplied credentials: [username: phoenix]
+ACTION: AUTHENTICATION_SUCCESS
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:45:47 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:45:47,350 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Added ticket [TGT-1-KUAkbil9MEao4fEF5SDzxVjxk49S2G1kuz1EHlgGx0I0krSBPn-cas] to registry.
+2011-12-31 14:45:47,351 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: [username: phoenix]
+WHAT: TGT-1-KUAkbil9MEao4fEF5SDzxVjxk49S2G1kuz1EHlgGx0I0krSBPn-cas
+ACTION: TICKET_GRANTING_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:45:47 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:45:47,351 DEBUG [org.jasig.cas.web.support.CookieRetrievingCookieGenerator] - Removed cookie with name [CASPRIVACY]
+2011-12-31 14:45:47,352 DEBUG [org.jasig.cas.web.support.CookieRetrievingCookieGenerator] - Added cookie with name [CASTGC] and value [TGT-1-KUAkbil9MEao4fEF5SDzxVjxk49S2G1kuz1EHlgGx0I0krSBPn-cas]
+2011-12-31 14:45:47,354 DEBUG [org.jasig.cas.CentralAuthenticationServiceImpl] - Removing ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas] from registry.
+2011-12-31 14:45:47,354 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas]
+2011-12-31 14:45:47,354 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas]
+2011-12-31 14:45:47,354 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: audit:unknown
+WHAT: TGT-1-7VdDqFzJpMcrdhpF3EhEsJV5pgeGuB0JlIWPxwXWfl7S5NMXOq-cas
+ACTION: TICKET_GRANTING_TICKET_DESTROYED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:45:47 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:45:47,355 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-KUAkbil9MEao4fEF5SDzxVjxk49S2G1kuz1EHlgGx0I0krSBPn-cas]
+2011-12-31 14:45:47,355 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Ticket [TGT-1-KUAkbil9MEao4fEF5SDzxVjxk49S2G1kuz1EHlgGx0I0krSBPn-cas] found in registry.
+2011-12-31 14:45:47,358 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Added ticket [ST-1-CpQSn7HRC4oP9EUO42Cb-cas] to registry.
+2011-12-31 14:45:47,358 INFO [org.jasig.cas.CentralAuthenticationServiceImpl] - Granted service ticket [ST-1-CpQSn7HRC4oP9EUO42Cb-cas] for service [http://localhost:8082/web2/j_spring_cas_security_check] for user [phoenix]
+2011-12-31 14:45:47,359 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [TGT-1-KUAkbil9MEao4fEF5SDzxVjxk49S2G1kuz1EHlgGx0I0krSBPn-cas]
+2011-12-31 14:45:47,359 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Ticket [TGT-1-KUAkbil9MEao4fEF5SDzxVjxk49S2G1kuz1EHlgGx0I0krSBPn-cas] found in registry.
+2011-12-31 14:45:47,359 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: phoenix
+WHAT: ST-1-CpQSn7HRC4oP9EUO42Cb-cas for http://localhost:8082/web2/j_spring_cas_security_check
+ACTION: SERVICE_TICKET_CREATED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:45:47 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:45:47,649 DEBUG [org.jasig.cas.web.support.CasArgumentExtractor] - Extractor generated service for: http://localhost:8082/web2/j_spring_cas_security_check
+2011-12-31 14:45:47,654 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [ST-1-CpQSn7HRC4oP9EUO42Cb-cas]
+2011-12-31 14:45:47,654 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Ticket [ST-1-CpQSn7HRC4oP9EUO42Cb-cas] found in registry.
+2011-12-31 14:45:47,657 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Removing ticket [ST-1-CpQSn7HRC4oP9EUO42Cb-cas] from registry
+2011-12-31 14:45:47,658 DEBUG [org.jasig.cas.ticket.registry.DefaultTicketRegistry] - Attempting to retrieve ticket [ST-1-CpQSn7HRC4oP9EUO42Cb-cas]
+2011-12-31 14:45:47,658 INFO [com.github.inspektr.audit.support.Slf4jLoggingAuditTrailManager] - Audit trail record BEGIN
+=============================================================
+WHO: audit:unknown
+WHAT: ST-1-CpQSn7HRC4oP9EUO42Cb-cas
+ACTION: SERVICE_TICKET_VALIDATED
+APPLICATION: CAS
+WHEN: Sat Dec 31 14:45:47 CET 2011
+CLIENT IP ADDRESS: 127.0.0.1
+SERVER IP ADDRESS: 127.0.0.1
+=============================================================
+
+
+2011-12-31 14:45:47,762 DEBUG [org.jasig.cas.web.ServiceValidateController] - Successfully validated service ticket: ST-1-CpQSn7HRC4oP9EUO42Cb-cas
+2011-12-31 14:45:52,383 INFO [org.jasig.cas.util.AutowiringSchedulerFactoryBean] - Shutting down Quartz Scheduler
