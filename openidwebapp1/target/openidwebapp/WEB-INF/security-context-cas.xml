@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+	                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+	                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+
+	<!-- ======================== FILTER CHAIN ======================= -->
+
+	<!--
+		if you wish to use channel security, add "channelProcessingFilter," in
+		front of "securityContextPersistenceFilter" in the list below
+	-->
+	<http entry-point-ref="casEntryPoint">
+		<custom-filter position="CAS_FILTER" ref="casFilter" />
+		<form-login authentication-failure-url="/login.jsp?authfailed=true" />
+		<openid-login login-page="/login.jsp"
+			authentication-failure-url="/login.jsp?authfailed=true"
+			default-target-url="/secure/home.do" />
+		<!-- Logout just below works but not as a single sign out -->
+		<!-- logout logout-success-url="https://localhost:8443/cas/logout?service=http://localhost:8081/web1"/-->
+		<logout logout-success-url="/cas-logout.jsp"/>
+        <custom-filter ref="requestSingleLogoutFilter" before="LOGOUT_FILTER"/>
+        <custom-filter ref="singleLogoutFilter" before="CAS_FILTER"/>
+		<intercept-url pattern="/secure/**" access="ROLE_USER, ROLE_ADMIN" />
+		<intercept-url pattern="/**"
+			access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN" />
+
+		<!--
+			custom-filter ref="customOpenIdAuthenticationFilter"
+			position="OPENID_FILTER"/
+		-->
+		<logout />
+	</http>
+	
+	<beans:bean id="singleLogoutFilter" class="org.jasig.cas.client.session.SingleSignOutFilter"/>
+  <beans:bean id="requestSingleLogoutFilter"
+        class="org.springframework.security.web.authentication.logout.LogoutFilter">
+    <beans:constructor-arg value="https://localhost:8443/cas/logout"/>
+    <beans:constructor-arg>
+      <beans:bean class=
+          "org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+    </beans:constructor-arg>
+    <beans:property name="filterProcessesUrl" value="/j_spring_cas_security_logout"/>
+  </beans:bean>
+
+	<beans:bean id="casFilter"
+		class="org.springframework.security.cas.web.CasAuthenticationFilter">
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+	</beans:bean>
+
+	<beans:bean id="casEntryPoint"
+		class="org.springframework.security.cas.web.CasAuthenticationEntryPoint">
+		<beans:property name="loginUrl" value="https://localhost:8443/cas/login" />
+		<beans:property name="serviceProperties" ref="serviceProperties" />
+	</beans:bean>
+
+	<beans:bean id="serviceProperties"
+		class="org.springframework.security.cas.ServiceProperties">
+		<beans:property name="service"
+			value="http://localhost:8081/web1/j_spring_cas_security_check" />
+		<beans:property name="sendRenew" value="false" />
+	</beans:bean>
+	
+		<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userService" />
+		<authentication-provider ref="casAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="casAuthenticationProvider"
+		class="org.springframework.security.cas.authentication.CasAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="userService" />
+		<beans:property name="serviceProperties" ref="serviceProperties" />
+		<beans:property name="ticketValidator">
+			<beans:bean
+				class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+				<beans:constructor-arg index="0"
+					value="https://localhost:8443/cas" />
+			</beans:bean>
+		</beans:property>
+		<beans:property name="key"
+			value="an_id_for_this_auth_provider_only" />
+	</beans:bean>
+
+	<user-service id="userService">
+		<user authorities="ROLE_USER" name="phoenix" password="phoenix" />
+		<user authorities="ROLE_USER, ROLE_ADMIN" name="admin" password="admin" />
+		<user authorities="ROLE_USER, ROLE_ADMIN" name="http://phoenix-secure.myopenid.com/"
+			password="" />
+		<user authorities="ROLE_USER" name="https://profiles.google.com/esnault.frederic" />
+	</user-service>
+	
+
+	<!--
+		beans:bean id="authenticationProcessingFilterEntryPoint"
+		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<beans:property name="loginFormUrl" value="/login.jsp" />
+		</beans:bean> <beans:bean id="customOpenIdAuthenticationFilter"
+		class="org.phoenix.openid.openidwebapp.security.CustomOpenIdAuthenticationFilter">
+		<beans:property name="openIdProviderUrl"
+		value="http://localhost:8082/openid-provider/check.do?username="/>
+		<beans:property name="authenticationManager"
+		ref="authenticationManager"/> <beans:property
+		name="authenticationSuccessHandler" ref="openIdSuccessHandler"/>
+		<beans:property name="authenticationFailureHandler"
+		ref="openIdFailureHandler"/> </beans:bean> <beans:bean
+		id="openIdSuccessHandler"
+		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
+		<beans:property name="defaultTargetUrl" value="/login.jsp" />
+		</beans:bean> <beans:bean id="openIdFailureHandler"
+		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<beans:property name="defaultFailureUrl"
+		value="/login.jsp?authfailed=true" /> </beans:bean
+	-->
+	<!-- ======================== AUTHENTICATION ======================= -->
+
+
+
+	<!--
+		beans:bean id="anonymousProcessingFilter"
+		class="org.springframework.security.web.authentication.AnonymousAuthenticationFilter">
+		<property name="key" value="foobar" /> <property name="userAttribute"
+		value="anonymousUser,ROLE_ANONYMOUS" /> </beans:bean> <beans:bean
+		id="anonymousAuthenticationProvider"
+		class="org.springframework.security.authentication.AnonymousAuthenticationProvider">
+		<property name="key" value="foobar" /> </beans:bean> <beans:bean
+		id="securityContextPersistenceFilter"
+		class="org.springframework.security.web.context.SecurityContextPersistenceFilter"
+		/> <beans:bean id="securityContextHolderAwareRequestFilter"
+		class="org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter"
+		/> <beans:bean id="exceptionTranslationFilter"
+		class="org.springframework.security.web.access.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint"
+		ref="authenticationProcessingFilterEntryPoint" /> <property
+		name="accessDeniedHandler"> <beans:bean
+		class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+		<property name="errorPage" value="/login.jsp?access_denied=1" />
+		</beans:bean> </property> </beans:bean> <beans:bean
+		id="httpRequestAccessDecisionManager"
+		class="org.springframework.security.access.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions" value="false" /> <property
+		name="decisionVoters"> <list> <ref bean="roleVoter" /> </list>
+		</property> </beans:bean> <beans:bean id="filterSecurityInterceptor"
+		class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager"
+		ref="httpRequestAccessDecisionManager" /> <property
+		name="securityMetadataSource"> <filter-security-metadata-source
+		id="securityConfiguration"> <intercept-url pattern="/secure/**"
+		access="ROLE_USER" /> <intercept-url pattern="/**"
+		access="ROLE_ANONYMOUS, ROLE_USER, ROLE_REMEMBERME" />
+		</filter-security-metadata-source> </property> </beans:bean>
+
+		<beans:bean id="roleVoter"
+		class="org.springframework.security.access.vote.RoleVoter" />
+
+		<beans:bean id="logoutFilter"
+		class="org.springframework.security.web.authentication.logout.LogoutFilter">
+		<constructor-arg ref="logoutSuccessHandler" /> <constructor-arg>
+		<beans:bean
+		class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+		</constructor-arg> </beans:bean> <beans:bean id="logoutSuccessHandler"
+		class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
+		<property name="defaultTargetUrl" value="/index.jsp" /> </beans:bean>
+
+
+		<beans:bean id="authenticationProcessingFilter"
+		class="org.springframework.security.web.authentication.AuthenticationProcessingFilter">
+		<property name="filterProcessesUrl" value="/j_spring_security_check"
+		/> <property name="authenticationManager" ref="authenticationManager"
+		/> <property name="authenticationSuccessHandler"
+		ref="loginSuccessHandler" /> <property
+		name="authenticationFailureHandler" ref="loginFailureHandler" />
+		</beans:bean> <beans:bean id="openIdAuthenticationFilter"
+		class="org.springframework.security.openid.OpenIDAuthenticationFilter"/>
+
+		<beans:bean id="loginSuccessHandler"
+		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
+		<property name="defaultTargetUrl" value="/secure/home.jsp" />
+		</beans:bean> <beans:bean id="loginFailureHandler"
+		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<property name="defaultFailureUrl" value="/login.jsp?login_error=1" />
+		</beans:bean> <beans:bean
+		id="authenticationProcessingFilterEntryPoint"
+		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<property name="loginFormUrl" value="/login.jsp" /> </beans:bean
+	-->
+</beans:beans>
