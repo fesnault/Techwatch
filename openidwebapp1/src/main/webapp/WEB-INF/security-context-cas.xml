@@ -95,6 +95,7 @@
 		<user authorities="ROLE_USER, ROLE_ADMIN" name="http://phoenix-secure.myopenid.com/"
 			password="" />
 		<user authorities="ROLE_USER" name="https://profiles.google.com/esnault.frederic" />
+		<user authorities="ROLE_USER" name="http://localhost:8080/cas/phoenix" />
 	</user-service>
 	
 

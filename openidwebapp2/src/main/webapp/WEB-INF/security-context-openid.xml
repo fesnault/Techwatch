@@ -25,6 +25,7 @@
 			default-target-url="/secure/home.do" />
 		<logout logout-success-url="http://localhost:8081/web1"/>
 		<intercept-url pattern="/secure/**" access="ROLE_USER, ROLE_ADMIN" />
+		<intercept-url pattern="/id/**" access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN" />
 		<intercept-url pattern="/**" access="ROLE_ANONYMOUS, ROLE_USER, ROLE_ADMIN" />
 		<!--
 			custom-filter ref="customOpenIdAuthenticationFilter"
