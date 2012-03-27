@@ -54,6 +54,7 @@
 
 	<bean id="handlerMappingA"
 		class="org.jasig.cas.support.openid.web.support.OpenIdPostUrlHandlerMapping">
+        <property name="order" value="1"/>
 		<property name="mappings">
 			<props>
 				<prop key="/login">openIdValidateController</prop>
@@ -61,11 +62,12 @@
 		</property>
 	</bean>
 
-	<bean id="handlerMappingC"
-		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
+    <bean id="handlerMappingC"
+          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+    <property name="mappings">
 			<props>
-				<prop key="/logout">
+                <prop key="/openid/*">openIdProviderController</prop>
+                <prop key="/logout">
 					logoutController
 				</prop>
 				<prop key="/serviceValidate">
@@ -101,7 +103,7 @@
                 </prop>
 
 				<prop key="/services/*">manageRegisteredServicesMultiActionController</prop>
-				<prop key="/openid/*">openIdProviderController</prop>
+
 				<prop key="/authorizationFailure.html">passThroughController</prop>
 				<prop key="/403.html">passThroughController</prop>
 			</props>
@@ -131,7 +133,7 @@
 		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
 		p:viewName="serviceLogoutView" />
 
-	<bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping"
+	<bean id="handlerMappingB" class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping"
 		p:flowRegistry-ref="flowRegistry" p:order="2">
 		<property name="interceptors">
 			<ref local="localeChangeInterceptor" />
@@ -219,8 +221,9 @@
 		The default one merely accepts the value after the last "/".
 		A more robust implementation should check the entire URL. Note, that means the default one SHOULD NOT be used in production.
 	-->
+
 	<bean id="openIdSingleSignOnAction" class="org.jasig.cas.support.openid.web.flow.OpenIdSingleSignOnAction"
-        p:centralAuthenticationService-ref="centralAuthenticationService" />
+        p:centralAuthenticationService-ref="centralAuthenticationService"/>
 
 	<bean id="authenticationViaFormAction" class="org.jasig.cas.web.flow.AuthenticationViaFormAction"
 		p:centralAuthenticationService-ref="centralAuthenticationService"
