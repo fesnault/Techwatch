@@ -128,9 +128,15 @@
 		 -->
 	</bean>
 
-    <bean id="passThroughController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController" /> 
-	
-	<bean
+    <bean id="passThroughController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+
+    <bean id="openIdValidateController" class="org.jasig.cas.web.ServiceValidateController"
+          p:validationSpecificationClass="org.jasig.cas.validation.Cas20WithoutProxyingValidationSpecification"
+          p:centralAuthenticationService-ref="centralAuthenticationService"
+          p:proxyHandler-ref="proxy20Handler" p:argumentExtractor-ref="openIdArgumentExtractor"
+          p:successView="casOpenIdServiceSuccessView" p:failureView="casOpenIdServiceFailureView" />
+
+    <bean
 		id="openIdProviderController"
 		class="org.jasig.cas.web.OpenIdProviderController"
 		p:loginUrl="${cas.securityContext.casProcessingFilterEntryPoint.loginUrl}" />
