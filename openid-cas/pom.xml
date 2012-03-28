@@ -6,7 +6,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jasig.cas</groupId>
-    <artifactId>cas-server-webapp</artifactId>
+    <artifactId>cas-openid-webapp-demo</artifactId>
     <packaging>war</packaging>
     <name>JA-SIG CAS Web Application</name>
     <dependencies>
