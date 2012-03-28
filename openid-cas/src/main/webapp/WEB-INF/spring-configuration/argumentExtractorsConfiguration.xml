@@ -16,9 +16,12 @@
 
  	<bean id="samlArgumentExtractor" class="org.jasig.cas.web.support.SamlArgumentExtractor"
              p:httpClient-ref="httpClient" />
+
+    <bean id="openIdArgumentExtractor" class="org.jasig.cas.support.openid.web.support.OpenIdArgumentExtractor" />
  	
  	<util:list id="argumentExtractors">
 		<ref bean="casArgumentExtractor" />
+        <ref bean="openIdArgumentExtractor" />
  		<ref bean="samlArgumentExtractor" />
  	</util:list>
 </beans>
