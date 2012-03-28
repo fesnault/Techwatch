@@ -170,6 +170,14 @@
                         <property name="serviceId" value="imap://**" />
                         <property name="evaluationOrder" value="10000004" />
                     </bean>
+
+                    <bean class="org.jasig.cas.services.RegisteredServiceImpl">
+                        <property name="id" value="4" />
+                        <property name="name" value="WEB1" />
+                        <property name="description" value="Web 1" />
+                        <property name="serviceId" value="http://localhost:8081/web1/j_spring_cas_security_check" />
+                        <property name="evaluationOrder" value="10000005" />
+                    </bean>
                 </list>
             </property>
         </bean>
