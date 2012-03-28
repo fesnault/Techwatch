@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.perf4j:perf4j:log4jonly:0.9.14">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/perf4j/perf4j/0.9.14/perf4j-0.9.14-log4jonly.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/perf4j/perf4j/0.9.14/perf4j-0.9.14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/perf4j/perf4j/0.9.14/perf4j-0.9.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
