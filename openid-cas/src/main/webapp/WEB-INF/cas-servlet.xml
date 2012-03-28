@@ -48,6 +48,16 @@
 	<bean id="errorHandlerResolver" class="org.jasig.cas.web.NoSuchFlowExecutionExceptionResolver" />
 
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+
+    <bean id="handlerMappingOpendId"
+          class="org.jasig.cas.support.openid.web.support.OpenIdPostUrlHandlerMapping">
+        <property name="order" value="1"/>
+        <property name="mappings">
+            <props>
+                <prop key="/login">openIdValidateController</prop>
+            </props>
+        </property>
+    </bean>
 	
 	<bean
 		id="handlerMappingA"
@@ -209,6 +219,16 @@
 		p:argumentExtractors-ref="argumentExtractors"
 		p:warnCookieGenerator-ref="warnCookieGenerator"
 		p:ticketGrantingTicketCookieGenerator-ref="ticketGrantingTicketCookieGenerator" />
+
+    <!-- Be Careful
+         The OpenIdSingleSignOnAction has an additional parameter not configured here.
+         Its the "extractor" property which accepts a "org.jasig.cas.support.openid.web.support.OpenIdUserNameExtractor".
+         The default one merely accepts the value after the last "/".
+         A more robust implementation should check the entire URL. Note, that means the default one SHOULD NOT be used in production.
+     -->
+
+    <bean id="openIdSingleSignOnAction" class="org.jasig.cas.support.openid.web.flow.OpenIdSingleSignOnAction"
+          p:centralAuthenticationService-ref="centralAuthenticationService"/>
 	
 	<bean id="authenticationViaFormAction" class="org.jasig.cas.web.flow.AuthenticationViaFormAction"
 		p:centralAuthenticationService-ref="centralAuthenticationService"
